@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SE Map Viewer</title>
+	<meta charset="UTF-8">
+    <style>
+        body{
+            /* set margin to 0 and overflow to hidden, to use the
+            complete page */
+            margin: 0;
+            overflow: hidden;
+        }
+        #popup {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            margin: 0 20px 25px 20px;
+            width: 560px;  
+            display: inline-block;
+        }
+        #poptext {
+            color: white;
+            font-size: 12pt;
+        }
+    </style>
+    <script src="js/libs/three.min.js"></script>
+    <script src="js/libs/threex.planets.min.js"></script>
+    <script src="js/libs/stats.min.js"></script>
+    <script src="js/libs/dat.gui.min.js"></script>
+    <script src="js/libs/Detector.js"></script>
+    <script src="js/libs/OrbitControls.min.js"></script>
+    <script src="js/libs/ColladaLoader.min.js"></script>
+</head>
+<body>
+<div id="Stats-output"></div>
+<div id="WebGL-output"></div>
+<div id="popup"><span id="poptext"></span></div>
+<script src="js/load.js"></script>
+<script src="js/map.js"></script>
+</body>
+</html>
