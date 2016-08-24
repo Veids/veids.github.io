@@ -76,5 +76,11 @@ function loadXMLDoc(dname)
         xhttp=new ActiveXObject("Microsoft.XMLHTTP");
     xhttp.open("GET", dname, false);
     xhttp.send();
-    return xhttp.responseXML;
+    if(xhttp.responseXML)    
+        return xhttp.responseXML;
+    else {
+        var parser = new DOMParser();
+        var xmlDoc = parser.parseFromString(xhttp.responseText, "application/xml");
+        return xmlDoc;
+    }
 }
